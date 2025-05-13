@@ -45,7 +45,6 @@ public class Exercise2 extends SlingAllMethodsServlet {
             response.getWriter().write("Resource not found at path: " + path);
             return;
         }
- 
         try {
             Node pageNode = resource.adaptTo(Node.class);
             if (pageNode != null && pageNode.hasNode("jcr:content")) {

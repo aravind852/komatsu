@@ -21,9 +21,10 @@
 <sly data-sly-use.searchModel="com.adobe.aem.guides.wknd.core.models.SearchResultModel"></sly>
 
 <div class="search-form-component">
-    <form method="get">
+    <form method="get" action = "/bin/searchtitles">
         <label data-sly-test="${properties.inputLabel}">${properties.inputLabel}</label>
         <input type="text" name="searchTerm" placeholder="Enter search term" value="${searchForm.searchTerm}"/>
+		<input type="text" id="search" name="searchTerm" placeholder="Enter search term" required>
         <button type="submit">${properties.buttonText}</button>
     </form>
 
